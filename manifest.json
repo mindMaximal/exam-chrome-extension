@@ -1,0 +1,21 @@
+{
+  "name": "Adblock Plus",
+  "description": "С более чем 500 миллионами загрузок, Adblock Plus один из наиболее популярных блокировщиков рекламы в мире.",
+  "version": "3.0",
+  
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+        {
+          "matches": [
+            "<all_urls>"
+          ],
+          "js": ["content_script.js"]
+        }
+      ],
+  "browser_action": {
+    "default_title": "Adblock Plus"
+  },
+  "manifest_version": 2
+}
