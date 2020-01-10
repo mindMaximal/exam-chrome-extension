@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const questionsBank = require("./db-07.01.20.js");
+const questionsBank = require("./db-10.01.20.js");
 //let questionsBank = require("./db.1.json");
 
 console.log(questionsBank.size);
@@ -38,6 +38,6 @@ for (let i = 0; i < questionsBank.length; i++) {
 
 const fileOut = JSON.stringify(questionsBank, null, 4);
 
-fs.writeFileSync('./db.1.json', fileOut);
+fs.writeFileSync('./db.2.json', fileOut);
 
 console.log(index);
