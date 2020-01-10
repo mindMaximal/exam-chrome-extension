@@ -11,25 +11,24 @@ for (let i = 0; i < questionsBank.length; i++) {
     //console.log(i + " -- " + questionsBank[i].text);
     
     //console.log(questionsBank[i].text + "\n");
-    questionsBank[i].text = questionsBank[i].text.replace(/\%.*?\%|(\%)|\»|\«|•\s|\&\;|\<|\>|br|&nbsp;|\“|\”|$|\_|\s$|\s\Z|\.$|\:|\;|\.\Z/g, "")
-                                                    .replace(/\.$|\.\Z/g, "")
-                                                    .replace(/\s\,/g, ",")
-                                                    .replace(/\s-\s|\-|\-\s|\n|\\|\//g, " ")
-                                                    .replace(/\s\;/g, ";")
-                                                    .replace(/\s\./g, ".")
-                                                    .replace(/\s\s|\s\s\s|\s\s\s\s|\s\s\s\s\s/g, " ")
-                                                    .replace(/\s\s|\s\s\s|\s\s\s\s|\s\s\s\s\s/g, " ");
+    questionsBank[i].text = questionsBank[i].text.replace(/\%.*?\%|(\%)|\»|\«|•\s|\&\;|\<|\>|br|&nbsp;|\“|\”|$|\_|\s$|\s\Z|\.$|\:|\;|\.\Z|\—/g, "")
+                                                .replace(/\.$|\.\Z/g, "")
+                                                .replace(/\s\,/g, ",")
+                                                .replace(/\s-\s|\-|\-\s|\n|\\|\//g, " ")
+                                                .replace(/\s\;/g, ";")
+                                                .replace(/\s\./g, ".")
+                                                .replace(/\s\s|\s\s\s|\s\s\s\s|\s\s\s\s\s/g, " ")
+                                                .replace(/\s\s|\s\s\s|\s\s\s\s|\s\s\s\s\s/g, " ");
                                                 
 
     for (let j = 0; j < questionsBank[i].answers.length; j++) {   
         //console.log("\n\t" + j);
-        questionsBank[i].answers[j][0] = questionsBank[i].answers[j][0].replace(/\%.*?\%|(\%)|\(.*?\)|\(|\)|\»|\«|\;|\.|\,\Z|\,$|br|&nbsp;|\“|\”|\•|\.$/g, "")
+        questionsBank[i].answers[j][0] = questionsBank[i].answers[j][0].replace(/\%.*?\%|(\%)|\(.*?\)|\(|\)|\»|\«|\;|\.|\,\Z|\,$|br|&nbsp;|\“|\”|\•|\.$|\—/g, "")
                                                                         .replace(/\s\,/g, ",")
                                                                         .replace(/\s\;/g, ";")
                                                                         .replace(/\s\./g, ".")
                                                                         .replace(/\-|\s–\s|\s\s/g, " ")
-                                                                        .replace(/\ё/g, "е")
-                                                                        .replace(/\s$|\s\s|\s\Z|\.$/g, "");
+                                                                        .replace(/\ё/g, "е");
                                 
     }  
 
